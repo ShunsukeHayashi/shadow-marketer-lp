@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シャドーマーケッター® - 無料オンラインプログラム</title>
+
+  <!-- SEO -->
+  <meta name="description" content="スキル、実績、経験、SNSの影響力がなくても、年間300万円＋成果報酬5%の契約を獲得">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ヘッダーセクション（ダーク） */
+    .header-dark {
+      background: #2C2C2C;
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px 40px;
+    }
+
+    .header-dark h1 {
+      font-size: 27.375px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    .header-dark .highlight-red {
+      color: #EC181C;
+      font-weight: 700;
+    }
+
+    .header-dark .highlight-brand {
+      color: #FF6633;
+      font-size: 32px;
+      font-weight: 700;
+      display: block;
+      margin: 10px 0;
+    }
+
+    .header-dark p {
+      font-size: 16px;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    /* CTAボタン（オレンジ） */
+    .cta-btn {
+      display: block;
+      background: linear-gradient(180deg, #FF6633 0%, #FF5522 100%);
+      color: #fff;
+      text-decoration: none;
+      padding: 22px 40px;
+      border-radius: 60px;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+      margin: 40px 20px;
+      box-shadow: 0 6px 20px rgba(255, 102, 51, 0.35);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      width: calc(100% - 40px);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 102, 51, 0.45);
+    }
+
+    /* ライトセクション */
+    .section-light {
+      background: #fff;
+      padding: 60px 20px;
+    }
+
+    .section-light h2 {
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2C2C2C;
+      line-height: 1.5;
+    }
+
+    .section-light p {
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    /* ダークセクション */
+    .section-dark {
+      background: #2C2C2C;
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .section-dark h2 {
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    /* テストモニアルカード */
+    .testimonial-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 35px 25px;
+      margin-bottom: 35px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .testimonial-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #E5E5E5;
+      margin-right: 18px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .testimonial-avatar svg {
+      width: 55px;
+      height: 55px;
+      fill: #999;
+    }
+
+    .testimonial-info .name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #2C2C2C;
+      margin-bottom: 6px;
+    }
+
+    .testimonial-info .role {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .testimonial-badge {
+      display: inline-block;
+      background: #EC181C;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-text strong {
+      color: #FF6633;
+      font-weight: 700;
+    }
+
+    .testimonial-note {
+      font-size: 13px;
+      color: #999;
+      font-style: italic;
+    }
+
+    /* プログラムボックス */
+    .program-box {
+      background: #f5f5f5;
+      border-left: 5px solid #FF6633;
+      padding: 28px 22px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+    }
+
+    .program-box h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #2C2C2C;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .program-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #FF6633;
+      color: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .program-box p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    /* FAQアイテム */
+    .faq-item {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 28px 22px;
+      margin-bottom: 20px;
+    }
+
+    .faq-q {
+      font-size: 17px;
+      font-weight: 700;
+      color: #2C2C2C;
+      margin-bottom: 14px;
+      padding-left: 32px;
+      position: relative;
+    }
+
+    .faq-q:before {
+      content: "Q";
+      position: absolute;
+      left: 0;
+      color: #FF6633;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .faq-a {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #555;
+      padding-left: 32px;
+      position: relative;
+    }
+
+    .faq-a:before {
+      content: "A";
+      position: absolute;
+      left: 0;
+      color: #2C2C2C;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    /* 写真ギャラリー */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 40px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .photo-item {
+      aspect-ratio: 1;
+      background: #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* プロフィールセクション */
+    .profile-section {
+      background: #fff;
+      padding: 60px 20px;
+    }
+
+    .profile-card {
+      background: #f9f9f9;
+      border-radius: 18px;
+      padding: 40px 28px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .profile-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: #ddd;
+      margin: 0 auto 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .profile-avatar svg {
+      width: 90px;
+      height: 90px;
+      fill: #999;
+    }
+
+    .profile-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2C2C2C;
+      margin-bottom: 12px;
+    }
+
+    .profile-title {
+      font-size: 15px;
+      color: #FF6633;
+      font-weight: 600;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .profile-bio {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #555;
+      text-align: left;
+    }
+
+    .profile-bio p {
+      margin-bottom: 18px;
+    }
+
+    /* フォームセクション */
+    .form-section {
+      background: #2C2C2C;
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-container h2 {
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 18px 16px;
+      border: 2px solid #444;
+      border-radius: 8px;
+      font-size: 17px;
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #FF6633;
+    }
+
+    .form-note {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #ccc;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    /* フッター */
+    .footer {
+      background: #2C2C2C;
+      color: #fff;
+      padding: 50px 20px 40px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .footer-notice {
+      margin-bottom: 30px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .footer p {
+      margin-bottom: 15px;
+    }
+
+    .footer a {
+      color: #FF6633;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .header-dark h1 {
+        font-size: 23px;
+      }
+
+      .header-dark .highlight-brand {
+        font-size: 27px;
+      }
+
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-btn {
+        padding: 20px 30px;
+        font-size: 16px;
+      }
+
+      .testimonial-avatar {
+        width: 70px;
+        height: 70px;
+      }
+
+      .testimonial-avatar svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダーセクション -->
+  <div class="header-dark">
+    <h1>
+      なぜ、<br>
+      <span class="highlight-red">スキル、実績、経験に自信なし！</span><br>
+      <span class="highlight-red">SNSの影響力もなし！</span><br>
+      地方在住の無名副業<br>
+      セールスライターが<br>
+      <span class="highlight-red">年間300万円＋売上5%の成果報酬</span><br>
+      の契約でも<br>
+      平日は1日2時間稼働、<br>
+      休日は朝〜夕方まで<br>
+      子どもと出かける余裕があるのか？
+    </h1>
+    <p>その秘密を公開…</p>
+    <p>
+      努力、時間、お金をかけない<br>
+      裏側のマーケティングの構築で<br>
+      クライアントに貢献して<br>
+      対等なパートナーとして認めてもらう
+    </p>
+    <p style="margin: 30px 0;">
+      <span style="font-size: 20px; font-weight: 700; display: block; margin-bottom: 8px;">"裏方のヒーロー"</span>
+      <span class="highlight-brand">シャドーマーケッター®</span>
+    </p>
+    <p>
+      という新しい職種を<br>
+      期間限定で無料公開！
+    </p>
+  </div>
+
+  <!-- CTA -->
+  <a href="#form" class="cta-btn">
+    今すぐ無料オンラインプログラムに参加する
+  </a>
+
+  <!-- 導入テキスト -->
+  <div class="section-light">
+    <h2>裏からクライアントを支える<br>"影の実力者"を目指してみませんか？</h2>
+    <p>
+      きっとあなたは不思議に思ったのかもしれません。<br>
+      「スキル、実績、経験、SNSの影響力は関係ない？」<br>
+      「しかも地方在住で無名の副業で年間300万円＋売上5%の成果報酬？」<br>
+      「平日は1日2時間稼働、休日は朝～夕方まで子どもと出かける余裕がある？」
+    </p>
+    <p>
+      そう疑うのも無理はありません。<br>
+      なぜなら、一般的には高額の報酬、高額の長期契約を獲得するにはスキル、実績、経験などが必要ですし、副業なら睡眠時間は5時間以下と忙しいのが当然だからです。
+    </p>
+    <p>
+      それでも、少しだけ考えていただきたいんです。
+    </p>
+    <p>
+      スキル、実績、経験に自信がなく、SNSの影響力もなく、地方在住の無名副業セールスライターKさんがクライアントと初対面から<strong style="color: #FF6633;">3ヶ月で年間300万円＋売上5%の成果報酬を獲得</strong>できたのは、なぜなのでしょうか？
+    </p>
+  </div>
+
+  <!-- テストモニアル -->
+  <div class="section-dark">
+    <h2>シャドーマーケッター®になれば、、、</h2>
+
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces" alt="Kさん" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <div class="testimonial-info">
+          <div class="name">Kさん (37歳)</div>
+          <div class="role">副業セールスコピーライター</div>
+        </div>
+      </div>
+      <div class="testimonial-badge">実績報告</div>
+      <div class="testimonial-text">
+        1案件50万円の案件を受注するも...納品せず、クライアントと出会ってたった<strong>3ヶ月後には年間300万円＋成果報酬5%</strong>の契約を獲得！
+      </div>
+      <div class="testimonial-note">
+        ※個人の感想であって、成果を保証するものではありません
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces" alt="Sさん" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <div class="testimonial-info">
+          <div class="name">Sさん (47歳)</div>
+          <div class="role">副業セールスコピーライター</div>
+        </div>
+      </div>
+      <div class="testimonial-badge">実績報告</div>
+      <div class="testimonial-text">
+        月額を契約してから1ヶ月しか経っていない状態で裏側のマーケティング構築を提案して、<strong>さらに月額5万円アップ！副業で月額22万円の契約！</strong>
+      </div>
+      <div class="testimonial-note">
+        ※個人の感想であって、成果を保証するものではありません
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=faces" alt="Mさん" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <div class="testimonial-info">
+          <div class="name">Mさん (36歳)</div>
+          <div class="role">副業セールスコピーライター</div>
+        </div>
+      </div>
+      <div class="testimonial-badge">実績報告</div>
+      <div class="testimonial-text">
+        表側のプロモーションのみの成果報酬で、他のライターも一律の契約だったのが、<strong>裏側のマーケティングを提案することで、あっさり契約内容の見直しに成功！</strong>
+      </div>
+      <div class="testimonial-note">
+        ※個人の感想であって、成果を保証するものではありません
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <a href="#form" class="cta-btn">
+    今すぐ無料オンラインプログラムに参加する
+  </a>
+
+  <!-- 選ばれる理由 -->
+  <div class="section-light">
+    <h2>怪しい？・・・でも、気になる？<br>特別にその秘密を公開します</h2>
+    <p>
+      今回は特別に今までなかった労力、時間、お金をかけない裏側のマーケ導線に特化した<strong style="color: #FF6633;">シャドーマーケッター®</strong>という新しいその秘密を今回は無料オンラインプログラムで公開します。
+    </p>
+    <p>
+      下記からメールアドレスを登録して、その秘密を知ってください。
+    </p>
+  </div>
+
+  <!-- プログラム内容 -->
+  <div class="section-dark">
+    <h2>シャドーマーケッター®<br>無料オンラインプログラムの内容</h2>
+
+    <div class="program-box">
+      <h3>
+        <span class="program-number">01</span>
+        <span>裏側のマーケ導線の構築でクライアントの売上に貢献する「シャドーマーケッター®」とは？</span>
+      </h3>
+      <p>
+        お金・信頼・感謝の報酬を獲得する"裏方のヒーロー"の全貌を明かします。
+      </p>
+    </div>
+
+    <div class="program-box">
+      <h3>
+        <span class="program-number">02</span>
+        <span>スキル、経験、実績に自信がなくても、年間300万円+売上5%の成果報酬を実現している訳</span>
+      </h3>
+      <p>
+        SNSの影響力がなくても、地方在住の副業でも1日2時間稼働が実現している秘密を公開。
+      </p>
+    </div>
+
+    <div class="program-box">
+      <h3>
+        <span class="program-number">03</span>
+        <span>【注意！】裏側のマーケ導線構築で絶対にやってはいけないコト</span>
+      </h3>
+      <p>
+        多くの人が知らない、失敗する落とし穴とその回避方法を解説します。
+      </p>
+    </div>
+
+    <div class="program-box">
+      <h3>
+        <span class="program-number">04</span>
+        <span>クライアントの売上に貢献する裏側のマーケ導線のアイデアがバンバン溢れてくる秘密のツール</span>
+      </h3>
+      <p>
+        アイデアに困らなくなる具体的なフレームワークとツールをご紹介します。
+      </p>
+    </div>
+
+    <div class="program-box">
+      <h3>
+        <span class="program-number">05</span>
+        <span>なぜ、今シャドーマーケッター®という新しい職種がチャンスなのか？3つの理由</span>
+      </h3>
+      <p>
+        市場の変化と、今すぐ始めるべき理由を詳しく解説します。
+      </p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <a href="#form" class="cta-btn">
+    今すぐ無料オンラインプログラムに参加する
+  </a>
+
+  <!-- なぜ無料公開 -->
+  <div class="section-light">
+    <h2>なぜ、無料で公開するのか？</h2>
+    <p>
+      これまではスキル、実績、経験がないとクライアントを獲得したり、月額・年間契約の獲得は圧倒的に不利でした。
+    </p>
+    <p>
+      それに、業界を見渡せば、たくさんのライバルがいるし、そのライバルたちも強敵ばかり。
+    </p>
+    <p>
+      ライバルのプロフィールを見れば、「自分なんで選ばれるのだろうか？」そんな不安と焦りを感じたこともあったでしょう。
+    </p>
+    <p>
+      でも現実は厳しく、スキル、実績、経験がなかったとしても生活があるので、お金を稼がなければいけません。
+    </p>
+    <p>
+      だから今まで経験のないことでも、果敢にチャレンジして、失敗しても立ち上がる強靭なメンタルが必要でした。
+    </p>
+    <p style="font-weight: 700; font-size: 17px; color: #FF6633;">
+      でも、それではあまりにも不公平だと思いました。
+    </p>
+  </div>
+
+  <!-- Win-Win -->
+  <div class="section-dark">
+    <h2>クライアントも<br>クライアントの顧客様も<br>あなたも、あなたの家族も<br>「みんながWinになる最高の職種」です。</h2>
+    <p style="text-align: center; margin-bottom: 35px; font-size: 16px;">
+      シャドーマーケッター®は関わる人全員がWinになる最高の職種だと思っています。
+    </p>
+    <div style="max-width: 500px; margin: 0 auto;">
+      <p style="margin-bottom: 20px; font-size: 17px;">✅ クライアント → 売上安定</p>
+      <p style="margin-bottom: 20px; font-size: 17px;">✅ 顧客様 → 大切にされる</p>
+      <p style="margin-bottom: 20px; font-size: 17px;">✅ あなた → 高報酬・時間的余裕</p>
+      <p style="margin-bottom: 20px; font-size: 17px;">✅ 家族 → 一緒の時間</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-light">
+    <h2>よくあるご質問</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">本当にスキル・経験がなくても成果を出せますか？</div>
+      <div class="faq-a">
+        はい、可能です。シャドーマーケッター®の手法は、高度なライティングスキルではなく、裏側のマーケティング構築に特化しています。実際に、Kさんは経験が浅い状態から3ヶ月で年間300万円＋成果報酬5%の契約を獲得しました。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">裏側のマーケティングとは具体的に何をするのですか？</div>
+      <div class="faq-a">
+        メールアドレスを取得した後の顧客育成、ステップメール、リピート購入の仕組み構築など、広告やウェビナーといった表側のマーケティングではなく、長期的な関係構築に特化した施策です。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">副業でも実践できますか？</div>
+      <div class="faq-a">
+        はい、実践できます。実際にKさんは副業で平日1日2時間稼働、休日は家族と過ごす時間を確保しながら、年間300万円＋成果報酬5%の契約を維持しています。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">無料オンラインプログラムの後、有料商品の購入が必要ですか？</div>
+      <div class="faq-a">
+        いいえ、購入の義務はありません。無料プログラムで基本的な内容を学べます。より詳しく学びたい方向けに「シャドーマーケッター®養成プログラム個別コンサルティング体験会&説明会（1000円）」のご案内はありますが、無理な押し売りは一切ありません。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">地方在住でも問題ありませんか？</div>
+      <div class="faq-a">
+        はい、全く問題ありません。実際に実績を出されているKさんも地方在住です。オンラインで完結する手法なので、どこに住んでいても実践できます。
+      </div>
+    </div>
+  </div>
+
+  <!-- 写真ギャラリー -->
+  <div class="section-dark">
+    <h2>セミナー・イベント実績</h2>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop" alt="セミナー風景1" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=300&fit=crop" alt="講演風景" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop" alt="参加者の様子" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop" alt="グループワーク" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="チームディスカッション" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="photo-item">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop" alt="ワークショップ" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+    <p style="text-align: center; font-size: 14px; margin-top: 25px; color: #ccc;">
+      ※ イメージ写真です。実際のセミナー・イベント写真に差し替えることをおすすめします。
+    </p>
+  </div>
+
+  <!-- プロフィール -->
+  <div class="profile-section">
+    <h2 style="text-align: center; margin-bottom: 45px; font-size: 26px; color: #2C2C2C;">プロフィール</h2>
+    <div class="profile-card">
+      <div class="profile-avatar">
+        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300&h=300&fit=crop&crop=faces" alt="藤原由基" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+      </div>
+      <div class="profile-name">藤原由基 / YUKI FUJIWARA</div>
+      <div class="profile-title">株式会社FJC代表取締役<br>セールスコピーライター</div>
+      <div class="profile-bio">
+        <p>
+          大阪府羽曳野市出身。29歳のフリーター時代、「ペン1本で食っていけるスキル」という言葉に惹かれ、セールスライティングを学び始める。2年半で200万円以上の教材を購入するも、稼げたのはわずか2万円。
+        </p>
+        <p>
+          絶望の中、2020年4月にはパンデミックの影響で32歳にして無職に。スキル・実績・経験・人脈ゼロから、独立するしかない状況に追い込まれ、セールスコピーライターとして起業。
+        </p>
+        <p>
+          その後、動画を活用したプロモーションに取り組み、ライターとしてのキャリアを確立。2022年7月、株式会社FJCを設立。
+        </p>
+        <p>
+          現在は、WEBプロモーションの全体設計をサポートし、集客・売上アップに貢献。さらに自身で4年間ほぼ毎日メルマガを配信し続け、累計で100以上の企画と施策を実施。机上の空論ではない実体験をもとにした方法に定評がある。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- フォームセクション -->
+  <div class="form-section" id="form">
+    <div class="form-container">
+      <h2>登録後すぐにお届けします</h2>
+      <p style="text-align: center; font-size: 20px; font-weight: 700; color: #FF6633; margin-bottom: 40px;">
+        シャドーマーケッター®<br>無料オンラインプログラム
+      </p>
+
+      <form>
+        <div class="form-group">
+          <label>メールアドレス（GメールかYahooメール推奨）</label>
+          <input type="email" placeholder="your-email@example.com" required>
+        </div>
+
+        <button type="submit" class="cta-btn" style="margin-top: 30px;">
+          今すぐ無料オンラインプログラムに参加する
+        </button>
+
+        <div class="form-note">
+          iCloud、Outlook、docomo、au、softbankは届きません。それ以外のメールアドレスをご利用ください。<br>
+          ※メールアドレス登録で動画を無料視聴いただけます。同時登録されるメルマガはあなたの意思でいつでも配信解除できます。
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <a href="#form" class="cta-btn">
+    今すぐ無料オンラインプログラムに参加する
+  </a>
+
+  <!-- フッター -->
+  <div class="footer">
+    <div class="footer-notice">有料サービスのお知らせ</div>
+    <p>
+      特別ビデオのURLと一緒にお送りするメルマガの中では、以下の有料サービスをご紹介しています。<br>
+      無理な押し売りなどはしませんし、有料商品の購入の義務もありません。
+    </p>
+    <p style="margin: 25px 0;">
+      【シャドーマーケッター®養成プログラム個別コンサルティング体験会&説明会】1000円(税込)
+    </p>
+    <p style="margin: 25px 0;">
+      <a href="#">プライバシーポリシー</a> ｜
+      <a href="#">特定商取引法に基づく表記</a> ｜
+      <a href="#">会社概要</a>
+    </p>
+    <p style="margin-top: 30px;">
+      Copyright(c) 2025 FJC All Rights Reserved.
+    </p>
+  </div>
+
+</body>
+</html>

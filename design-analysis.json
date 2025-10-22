@@ -1,0 +1,158 @@
+{
+  "referenceUrl": "https://happytry-lp.site?vos=meta",
+  "analyzedAt": "2025-10-22T17:00:00Z",
+  "structure": {
+    "sections": [
+      "header",
+      "hero",
+      "testimonials",
+      "problems",
+      "benefits",
+      "program",
+      "win-win",
+      "faq",
+      "cta",
+      "profile",
+      "footer"
+    ],
+    "totalSections": 11
+  },
+  "colors": {
+    "primary": "#10b981",
+    "primaryLight": "#d1fae5",
+    "accent": "#34d399",
+    "background": "#ffffff",
+    "text": "#1f2937",
+    "gray": "#6b7280"
+  },
+  "layout": {
+    "type": "vertical-scroll",
+    "responsive": true,
+    "breakpoints": ["640px", "768px", "1024px", "1280px", "1536px"],
+    "mobileFirst": true
+  },
+  "typography": {
+    "fontFamily": "Noto Sans JP",
+    "headingFont": "Noto Sans JP",
+    "bodyFont": "Noto Sans JP",
+    "fontSize": {
+      "h1": "2.25rem (md: 3rem)",
+      "h2": "2.25rem (md: 2.25rem)",
+      "h3": "1.5rem (md: 1.875rem)",
+      "body": "1rem",
+      "small": "0.875rem"
+    },
+    "fontWeights": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800
+    }
+  },
+  "designPatterns": {
+    "ctaStyle": {
+      "backgroundColor": "#10b981",
+      "hoverBackgroundColor": "#059669",
+      "textColor": "#ffffff",
+      "borderRadius": "0.5rem",
+      "padding": "1rem 2.5rem",
+      "fontSize": "1.125rem",
+      "fontWeight": 600,
+      "shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+    },
+    "cardStyle": {
+      "backgroundColor": "#ffffff",
+      "borderRadius": "0.5rem",
+      "shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+      "padding": "2rem",
+      "border": "2px solid #d1fae5"
+    },
+    "sectionSpacing": {
+      "paddingY": "5rem"
+    }
+  },
+  "ctaPlacements": [
+    {
+      "location": "header",
+      "text": "無料プログラムに参加",
+      "type": "button"
+    },
+    {
+      "location": "hero",
+      "text": "今すぐ無料プログラムに参加",
+      "type": "primary-button"
+    },
+    {
+      "location": "hero",
+      "text": "プログラム内容を見る",
+      "type": "secondary-button"
+    },
+    {
+      "location": "program-bottom",
+      "text": "今すぐ無料プログラムに参加する",
+      "type": "button"
+    },
+    {
+      "location": "cta-section",
+      "text": "今すぐ無料オンラインプログラムに参加する",
+      "type": "form-submit"
+    },
+    {
+      "location": "final-cta",
+      "text": "無料プログラムに参加する",
+      "type": "button"
+    }
+  ],
+  "formFields": [
+    {
+      "type": "email",
+      "label": "メールアドレス（GメールかYahooメール推奨）",
+      "required": true,
+      "placeholder": "your-email@example.com"
+    }
+  ],
+  "interactiveElements": {
+    "faq": {
+      "type": "accordion",
+      "framework": "Alpine.js",
+      "animationType": "x-transition"
+    }
+  },
+  "seo": {
+    "title": "シャドーマーケッター® - スキル・経験不要で年間300万円を目指す新しい職種",
+    "description": "スキル、実績、経験、SNSの影響力がなくても、裏側のマーケティング構築で年間300万円＋成果報酬5%の契約を獲得。平日2時間稼働で家族との時間も確保できる新しい職種「シャドーマーケッター®」無料オンラインプログラム公開中",
+    "keywords": "シャドーマーケッター, セールスライター, 副業, マーケティング, 年間契約, 成果報酬",
+    "ogTags": true,
+    "twitterCard": true
+  },
+  "performance": {
+    "cdnUsage": ["TailwindCSS", "Alpine.js", "Google Fonts"],
+    "lazyLoadingImages": false,
+    "minification": false,
+    "notes": "CDN使用によりビルド不要。プロダクション環境ではTailwind Purge推奨"
+  },
+  "accessibility": {
+    "semanticHTML": true,
+    "ariaLabels": false,
+    "altTexts": true,
+    "keyboardNavigation": true,
+    "colorContrast": "WCAG AA準拠"
+  },
+  "technicalStack": {
+    "htmlVersion": "HTML5",
+    "cssFramework": "TailwindCSS v3.4 (CDN)",
+    "jsFramework": "Alpine.js v3 (CDN)",
+    "fontProvider": "Google Fonts"
+  },
+  "notes": [
+    "参考サイト（HappyTry）のデザインパターンを踏襲",
+    "緑系アクセントカラーで信頼感を演出",
+    "縦型スクロール構成で11セクション",
+    "レスポンシブ対応（Mobile-First）",
+    "メールアドレス登録フォームのみのシンプル設計",
+    "複数箇所にCTA配置でコンバージョン最大化",
+    "Alpine.jsでFAQのアコーディオン実装",
+    "画像はすべてプレースホルダー（実際の画像に置換推奨）"
+  ]
+}
